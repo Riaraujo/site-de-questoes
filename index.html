@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sitedequestao.css">
+</head>
+<body>
+<header class="topo">
+    <div class="menu">
+
+    </div>
+    <div class="pesquisar">
+
+        <input type="search" placeholder="pesquisar questão especifica.">
+
+    </div>
+    <div class="usuario">
+
+    </div>
+</header>
+
+<div class="tudo">
+    <div class="bodyp">
+        <div class="corpo1">
+
+            <button id="afundavel" onclick="afundar()"><strong>Simulados</strong></button>
+            <button id="afundavel" onclick="afundar()"><em>Caderno de questoẽs</em></button>
+            <button id="afundavel" onclick="afundar()"><em>Caderno personalizado</em></button>
+            
+        
+        </div>
+        
+        <div class="estatistica">
+            <canvas id="grafico1" width="850px"></canvas> <!-- Onde o gráfico será desenhado -->
+        
+        </div>
+    </div>
+
+    
+    <div class="estatistica2">
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            const ctx = document.getElementById('grafico1');
+          
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['seg', 'ter', 'qua', 'qui', 'sex', 'sab','dom'],
+                datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+          
+    </body>
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>
